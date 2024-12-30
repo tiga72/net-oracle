@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> - Net Oracle</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+    <div class="background-image"></div>
+    <nav class="navbar">
+        <a href="/" class="home-link">Home</a>
+    </nav>
+
+    <div class="content-wrapper">
+            <!-- Left Column - Text Content -->
+            <div class="text-content">
+                <h1 class="page-title">BGP Routing Analysis</h1>
+                
+                <div class="description-text">
+                    <p>
+						The primary goal of this is to assess changes in the routing paths.
+						This is achieved by comparing the outputs of the 'sh ip bgp' command at different time intervals.
+						Additionally, the script's secondary purpose is to create concise yet thorough routing documentation 
+						company's network. It aims to detail the routing configurations for over 6,000 networks, ensuring 
+						an updated and accessible reference for efficient network management and troubleshooting.
+                    </p>
+                    <p>
+						Networks may originate from one or more Border Gateway Protocol (BGP) Autonomous System Numbers (ASNs). 
+						Each ASN is typically associated with a specific geographical region, indicating that a network's origin 
+						can span multiple regions. The automation facilitates the detection of routing changes by examining 
+						alterations in the list of ASNs or their associated regions. A significant change, such as a complete lack
+						of common ASNs/regions between two time periods, suggests a total change in the routing path of a network.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right Column - Images -->
+            <div class="image-content">
+                <div class="graph-container">
+                    <!-- BGP routing Analysis -->
+                    <div class="example-data">
+                        <!-- <img src="../static/images/bgp_routing.jpg" -->
+						<img src="../static/images/bgp_routing.jpg" alt="BGP routing report sample" class="bgp-routing-image">
+
+                             alt="BGP routing report sample" 
+                             class="bgp-routing-image">
+                        <p class="image-caption">BGP routing report sample</p>
+                    </div>
+                </div>
+            </div>
+    </div>
+</body>
+</html>
+
+
+

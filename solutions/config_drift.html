@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> - Net Oracle</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+    <div class="background-image"></div>
+    <nav class="navbar">
+        <a href="/" class="home-link">Home</a>
+    </nav>
+
+    <div class="content-wrapper">
+            <!-- Left Column - Text Content -->
+            <div class="text-content">
+                <h1 class="page-title">Configuration Drift Management</h1>
+                
+                <div class="description-text">
+                    <h2>Purpose</h2>
+                    <p>Automatically detects and reports deviations between device configurations and approved corporate standards ("golden configs").</p>
+
+                    <h2>Process</h2>
+                    <ul>
+                        <li>Device configurations are segmented by feature (SNMP, SSH, logging, etc.)</li>
+                        <li>Each segment is compared against approved standards</li>
+                        <li>Identifies two types of drift:</li>
+                        <ol>
+                            <li>Unauthorized configurations (need removal)</li>
+                            <li>Missing configurations (need addition)</li>
+                        </ol>
+                    </ul>
+
+                    <h2>Example</h2>
+                    <p>Given golden standard: <code>ntp server 1.1.1.1</code></p>
+
+                    <p><strong>Device1:</strong> No NTP config</p>
+                    <p>Fix: <code>+ ntp server 1.1.1.1</code></p>
+
+                    <p><strong>Device2:</strong> Has <code>ntp server 2.2.2.2</code></p>
+                    <p>Fix:</p>
+                    <pre>
+- ntp server 2.2.2.2
++ ntp server 1.1.1.1</pre>
+                </div>
+            </div>
+
+            <!-- Right Column - Images -->
+            <div class="image-content">
+                <div class="graph-container">
+                    <img src="../static/images/config_drift_sample_chart1.jpg" alt="Configuration Drift by Category" class="drift-graph">
+                    <img src="../static/images/config_drift_sample_chart2.jpg" alt="Configuration Drift Overall" class="drift-graph">
+					<p class="image-caption" style="color: #1E90FF;">*Note: Production data has been obfuscated to protect confidential information</p>
+                </div>
+            </div>
+    </div>
+</body>
+</html>

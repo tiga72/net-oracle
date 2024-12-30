@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Net Oracle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('../images/network-mesh.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.8;
+            z-index: -1;
+        }
+
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .home-link {
+            text-decoration: none;
+            color: #2C3E50;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .home-link:hover {
+            color: #1a73e8;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 2rem;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #2C3E50;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #2C3E50;
+            padding-bottom: 0.5rem;
+        }
+
+        .bio {
+            line-height: 1.8;
+            color: #2C3E50;
+        }
+
+        .bio p {
+            margin-bottom: 1.5rem;
+        }
+
+        .bio b {
+            color: #2C3E50;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-image"></div>
+    <nav class="navbar">
+        <a href="/" class="home-link">Home</a>
+    </nav>
+
+    <div class="content">
+        <h1>Value of remote host information in any network audit</h1>
+        
+        <div class="bio">
+
+            <p>
+			Remote host information is a cornerstone of network audits, particularly in large-scale enterprises with extensive interfaces
+            </p>
+
+            <p>
+			By associating link errors (e.g., CRC errors or duplex mismatches) with their destination hosts, reports can focus on high-impact issues like trunk links rather than isolated end-user connections
+            </p>
+            
+            <p>
+			Including remote host data in health reports simplifies troubleshooting and enhances network reliability by highlighting the broader impact of issues.
+            </p>			
+
+        </div>
+    </div>
+</body>
+</html>

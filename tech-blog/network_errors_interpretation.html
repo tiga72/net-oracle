@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Net Oracle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('../images/network-mesh.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.8;
+            z-index: -1;
+        }
+
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .home-link {
+            text-decoration: none;
+            color: #2C3E50;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .home-link:hover {
+            color: #1a73e8;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 2rem;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #2C3E50;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #2C3E50;
+            padding-bottom: 0.5rem;
+        }
+
+        .bio {
+            line-height: 1.8;
+            color: #2C3E50;
+        }
+
+        .bio p {
+            margin-bottom: 1.5rem;
+        }
+
+        .bio b {
+            color: #2C3E50;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-image"></div>
+    <nav class="navbar">
+        <a href="/" class="home-link">Home</a>
+    </nav>
+
+    <div class="content">
+        <h1>Network Errors Interpretation</h1>
+        
+        <div class="bio">
+
+            <p>Network errors can be categorized by how they are measured: <b>cumulative</b>, <b>absolute</b>, and <b>delta</b> values.</p>
+
+            <p>
+                <b>Cumulative values</b> increment over time and do not reset automatically unless explicitly cleared or the device is restarted. 
+                Examples: CRC errors and total input packets in Cisco's show interface output.
+            </p>
+
+            <p>
+                <b>Absolute values</b> reflect the current value and do not increment over time.  
+                Example: input and output rate in Cisco's show interface output.
+            </p>
+            
+            <p>
+                <b>Delta value</b> is typically not found in any Cisco's CLI output but there is a way to calculate it.  
+                It can be very useful to interpret certain error stats.  
+                For example, if an interface has 500k CRC errors, we cannot take it at face value.  
+                Normally, cumulative values need to be interpreted with a time factor like "Last clearing counters".  
+                Example: My network health assessment report is able to generate delta values to interpret link error or traffic input/output.
+            </p>			
+
+        </div>
+    </div>
+</body>
+</html>

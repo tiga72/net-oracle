@@ -1,341 +1,103 @@
-# static/css/styles.css
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Automation Use Cases - Net Oracle</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <style>
+        .content {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 2rem;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
 
-body {
-    font-family: Arial, sans-serif;
-}
+        h1 {
+            color: #2C3E50;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #2C3E50;
+            padding-bottom: 0.5rem;
+        }
 
-.main-container {
-    position: relative;
-    min-height: 100vh;
-    overflow: hidden;
-}
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+            background: white;
+        }
 
-.background-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('../images/network-mesh.jpg');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.8;
-    z-index: -1;
-}
+        th, td {
+            border: 1px solid #ccc;
+            padding: 12px;
+            text-align: left;
+            font-size: 0.95rem;
+        }
 
-/* Navigation Bar Styles */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+        th {
+            background-color: #2C3E50;
+            color: white;
+        }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    #color: #1a73e8;
-	color: #2C3E50; /* Deep blue-gray */
-}
+        tr:nth-child(even) {
+            background-color: #f7f7f7;
+        }
+    </style>
+</head>
 
-.nav-items {
-    display: flex;
-    gap: 2rem;
-	justify-content: flex-end; /* Align the nav items to the right */
-}
+<body>
 
-/* Dropdown Styles */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
+<div class="main-container">
+    <div class="background-image"></div>
 
-.dropbtn {
-    background: none;
-    border: none;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    cursor: pointer;
-    color: #333;
-}
+    <nav class="navbar">
+        <a href="/" class="home-link">Home</a>
+    </nav>
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 200px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    z-index: 1;
-    border-radius: 4px;
-	right: 0; /* Position the dropdown to the right */
-}
+    <div class="content">
+        <h1>Network Automation Use Cases</h1>
 
-.dropdown-content a {
-    color: #333;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
+        <table>
+            <thead>
+                <tr>
+                    <th>Use Case</th>
+                    <th>Category</th>
+                    <th>Business Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Configuration Compliance Monitoring</td>
+                    <td>Configuration Management</td>
+                    <td>Continuously validates network devices against compliance baselines, identifying drift early and reducing risk exposure.</td>
+                </tr>
+                <tr>
+                    <td>Static Configuration Deployment at Scale</td>
+                    <td>Configuration Management</td>
+                    <td>Rapidly deploys standardized configurations across thousands of devices, improving consistency and reducing manual workload.</td>
+                </tr>
+                <tr>
+                    <td>Dynamic Interface Documentation</td>
+                    <td>Configuration Management</td>
+                    <td>Automatically modifies device configurations based on metadata and discovery, simplifying operational documentation.</td>
+                </tr>
+                <tr>
+                    <td>Link Quality Telemetry Analysis</td>
+                    <td>Health & Monitoring</td>
+                    <td>Monitors interface errors, CRC, duplex mismatches, and link quality indicators to provide proactive insight into network degradation.</td>
+                </tr>
+                <tr>
+                    <td>Automated Link Connectivity Testing</td>
+                    <td>Health & Monitoring</td>
+                    <td>Executes ping tests across all network links on a scheduled basis, detecting silent failures before they impact applications.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
 
-.dropdown-content a:hover {
-    background-color: #f8f9fa;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* Hero Content Styles */
-.hero-content {
-    padding: 6rem 2rem;
-    max-width: 800px;
-    margin-left: 4rem;
-}
-
-.main-title {
-    font-size: 4rem;
-    font-weight: bold;
-    #color: #2C3E50; /* Deep blue-gray */
-	color: #000080;
-    margin-bottom: 1rem;
-    line-height: 1.2;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.subtitle {
-    font-size: 2.5rem;
-    color: #1a73e8;
-    margin-bottom: 2rem;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-}
-
-.description {
-    font-size: 1.25rem;
-    line-height: 1.6;
-    color: #2C3E50; /* Same as main title for consistency */
-    max-width: 600px;
-    #background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white background */
-    padding: 1.5rem;
-    #border-radius: 8px;
-    #box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Optional: Add a smooth transition when hovering over the text */
-.hero-content h1,
-.hero-content h2,
-.hero-content p {
-    transition: all 0.3s ease;
-}
-
-.hero-content h1:hover,
-.hero-content h2:hover {
-    transform: scale(1.02);
-}
-
-/* Config Drift Page Specific Styles */
-.config-drift-content {
-    padding: 1.4rem;
-    position: relative;
-    z-index: 1;
-}
-
-.content-wrapper {
-    display: flex;
-    gap: 2rem;
-    max-width: 1400px;
-    margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.95);
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-	scale: 0.9;  /* Scale down the entire content */
-}
-
-.text-content {
-    flex: 1;
-    padding-right: 2rem;
-	font-size: 0.75em;  /* 70% of original size */
-}
-
-.image-content {
-    flex: 1.5;
-}
-
-.page-title {
-    font-size: 1.75rem;  /* Reduced from 2.5rem */
-    color: #2C3E50;
-    margin-bottom: 1.5rem;
-}
-
-.description-text {
-    font-size: 0.77rem;  /* 70% of 1.1rem */
-    line-height: 1.6;
-    color: #2C3E50;
-}
-
-.description-text p {
-    margin-bottom: 1rem;
-}
-
-.description-text ul {
-    margin: 1rem 0;
-    padding-left: 1.5rem;
-}
-
-.description-text li {
-    margin-bottom: 0.5rem;
-}
-
-.graph-container {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-	width: 80%;  /* Scale images to 80% */
-	margin: 0 auto;
-}
-
-.drift-graph {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Maintain responsive design */
-@media (max-width: 1200px) {
-    .content-wrapper {
-        flex-direction: column;
-    }
-    
-    .text-content {
-        padding-right: 0;
-        margin-bottom: 1.4rem;
-    }
-
-    .graph-container {
-        width: 80%;  /* Maintain image scale on smaller screens */
-    }
-}
-
-.description-text h2 {
-    color: #2C3E50;
-    font-size: 1.3rem;
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.description-text code {
-    background-color: #f5f7f9;
-    padding: 2px 6px;
-    border-radius: 4px;
-    font-family: monospace;
-    color: #2C3E50;
-}
-
-.description-text pre {
-    background-color: #f5f7f9;
-    padding: 1rem;
-    border-radius: 4px;
-    font-family: monospace;
-    color: #2C3E50;
-    margin: 1rem 0;
-}
-
-.description-text ul, .description-text ol {
-    margin-left: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.description-text li {
-    margin-bottom: 0.5rem;
-}
-
-/* Add these to your existing styles.css if not present */
-
-.description-text h2 {
-    color: #2C3E50;
-    font-size: 1.5rem;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-}
-
-.description-text h3 {
-    color: #2C3E50;
-    font-size: 1.2rem;
-    margin-top: 1.5rem;
-    margin-bottom: 0.75rem;
-}
-
-.description-text ul {
-    list-style-type: disc;
-    margin-left: 1.5rem;
-    margin-bottom: 1.5rem;
-}
-
-.description-text li {
-    margin-bottom: 0.5rem;
-    line-height: 1.4;
-}
-
-.description-text p {
-    margin-bottom: 1rem;
-    line-height: 1.6;
-}
-
-/* Network Health Specific Styles */
-.example-data {
-    margin-bottom: 2rem;
-    background-color: rgba(255, 255, 255, 0.95);
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.network-health-image {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-    margin-bottom: 0.5rem;
-}
-
-.image-caption {
-    font-size: 0.9rem;
-    color: #666;
-    margin-top: 0.5rem;
-    text-align: center;
-    font-style: italic;
-}
-
-.description-text h2 {
-    color: #2C3E50;
-    font-size: 1.4rem;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-}
-
-.description-text p {
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
-    text-align: justify;
-}
-
-/* Adjust image container for network health specific layout */
-.graph-container {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.bgp-routing-image {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-    margin-bottom: 0.5rem;
-}
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Automation Use Cases - Net Oracle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('../images/network-mesh.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.8;
+            z-index: -1;
+        }
+
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .home-link {
+            text-decoration: none;
+            color: #2C3E50;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .home-link:hover {
+            color: #1a73e8;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 2rem;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #2C3E50;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #2C3E50;
+            padding-bottom: 0.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+            background: white;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 12px;
+            text-align: left;
+            font-size: 0.95rem;
+        }
+
+        th {
+            background-color: #2C3E50;
+            color: white;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f7f7f7;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-image"></div>
+
+    <nav class="navbar">
+        <a href="/" class="home-link">Home</a>
+    </nav>
+
+    <div class="content">
+        <h1>Network Automation Use Cases</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Use Case</th>
+                    <th>Category</th>
+                    <th>Business Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Configuration Compliance Monitoring</td>
+                    <td>Configuration Management</td>
+                    <td>Continuously validates network devices against compliance baselines, identifying drift early and reducing risk exposure.</td>
+                </tr>
+                <tr>
+                    <td>Static Configuration Deployment at Scale</td>
+                    <td>Configuration Management</td>
+                    <td>Rapidly deploys standardized configurations across thousands of devices, improving consistency and reducing manual workload.</td>
+                </tr>
+                <tr>
+                    <td>Dynamic Interface Documentation</td>
+                    <td>Configuration Management</td>
+                    <td>Automatically modifies device configurations based on metadata and discovery, simplifying operational documentation.</td>
+                </tr>
+                <tr>
+                    <td>Link Quality Telemetry Analysis</td>
+                    <td>Health & Monitoring</td>
+                    <td>Monitors interface errors, CRC, duplex mismatches, and link quality indicators to provide proactive insight into network degradation.</td>
+                </tr>
+                <tr>
+                    <td>Automated Link Connectivity Testing</td>
+                    <td>Health & Monitoring</td>
+                    <td>Executes ping tests across all network links on a scheduled basis, detecting silent failures before they impact applications.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

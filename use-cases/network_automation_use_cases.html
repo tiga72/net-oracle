@@ -14,7 +14,6 @@
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-
         h1 {
             color: #2C3E50;
             font-size: 2rem;
@@ -22,44 +21,35 @@
             border-bottom: 2px solid #2C3E50;
             padding-bottom: 0.5rem;
         }
-
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 1.5rem;
             background: white;
         }
-
         th, td {
             border: 1px solid #ccc;
             padding: 12px;
             text-align: left;
             font-size: 0.95rem;
         }
-
         th {
             background-color: #2C3E50;
             color: white;
         }
-
         tr:nth-child(even) {
             background-color: #f7f7f7;
         }
     </style>
 </head>
-
 <body>
-
 <div class="main-container">
     <div class="background-image"></div>
-
     <nav class="navbar">
         <a href="/" class="home-link">Home</a>
     </nav>
-
     <div class="content">
         <h1>Network Automation Use Cases</h1>
-
         <table>
             <thead>
                 <tr>
@@ -72,32 +62,111 @@
                 <tr>
                     <td>Configuration Compliance Monitoring</td>
                     <td>Configuration Management</td>
-                    <td>Continuously validates network devices against compliance baselines, identifying drift early and reducing risk exposure.</td>
+                    <td>Continuously validates network devices against company configuration standards, preventing security gaps and policy violations</td>
                 </tr>
                 <tr>
                     <td>Static Configuration Deployment at Scale</td>
                     <td>Configuration Management</td>
-                    <td>Rapidly deploys standardized configurations across thousands of devices, improving consistency and reducing manual workload.</td>
+                    <td>Rapidly deploys standardized configurations across thousands of devices. Achievement: Deployed 30,000 TACACS configs across 7,000+ devices in 35 minutes</td>
                 </tr>
                 <tr>
                     <td>Dynamic Interface Documentation</td>
                     <td>Configuration Management</td>
-                    <td>Automatically modifies device configurations based on metadata and discovery, simplifying operational documentation.</td>
+                    <td>Automatically modifies device configurations based on discovered network context and peer information (e.g., tagging wireless controller uplinks with '#wireless', updating QoS policies based on device type)</td>
                 </tr>
                 <tr>
                     <td>Link Quality Telemetry Analysis</td>
                     <td>Health & Monitoring</td>
-                    <td>Monitors interface errors, CRC, duplex mismatches, and link quality indicators to provide proactive insight into network degradation.</td>
+                    <td>Monitors interface errors, CRC, duplex mismatches, and speed degradation to detect performance issues before they impact users</td>
                 </tr>
                 <tr>
                     <td>Automated Link Connectivity Testing</td>
                     <td>Health & Monitoring</td>
-                    <td>Executes ping tests across all network links on a scheduled basis, detecting silent failures before they impact applications.</td>
+                    <td>Executes ping tests across all network links on target devices to validate end-to-end connectivity and identify silent failures</td>
+                </tr>
+                <tr>
+                    <td>Link Stability & Flapping Detection</td>
+                    <td>Health & Monitoring</td>
+                    <td>Identifies unstable network links with excessive flap counts, enabling proactive replacement before outages occur</td>
+                </tr>
+                <tr>
+                    <td>Device Reload Risk Assessment</td>
+                    <td>Health & Monitoring</td>
+                    <td>Flags devices with extremely high uptimes that may be running outdated code or harboring memory leaks requiring maintenance windows</td>
+                </tr>
+                <tr>
+                    <td>Debug State Detection & Remediation</td>
+                    <td>Health & Monitoring</td>
+                    <td>Identifies devices running resource-intensive debug commands and automatically disables them to prevent performance degradation</td>
+                </tr>
+                <tr>
+                    <td>Unsaved Configuration Detection</td>
+                    <td>Health & Monitoring</td>
+                    <td>Discovers devices with uncommitted configuration changes and either saves or alerts, preventing configuration loss during unexpected reboots</td>
+                </tr>
+                <tr>
+                    <td>Media Type Mismatch Detection</td>
+                    <td>Health & Monitoring</td>
+                    <td>Discovers fiber optic media mismatches between link endpoints (e.g., SX vs LX) that cause intermittent connectivity issues</td>
+                </tr>
+                <tr>
+                    <td>OSPF Interface Type Validation</td>
+                    <td>Health & Monitoring</td>
+                    <td>Detects OSPF interface type mismatches (broadcast vs point-to-point) that prevent neighbor relationships from forming</td>
+                </tr>
+                <tr>
+                    <td>Self-Loopback Detection</td>
+                    <td>Health & Monitoring</td>
+                    <td>Identifies ports accidentally wired back to the same device, typically from cabling errors during installation</td>
+                </tr>
+                <tr>
+                    <td>Port-Channel Redundancy Audit</td>
+                    <td>Resilience & Redundancy</td>
+                    <td>Detects port-channels operating with only one active member, eliminating the redundancy they were designed to provide</td>
+                </tr>
+                <tr>
+                    <td>Single-Homed Device Discovery</td>
+                    <td>Resilience & Redundancy</td>
+                    <td>Identifies network devices lacking redundant uplinks, highlighting single points of failure in the infrastructure</td>
+                </tr>
+                <tr>
+                    <td>Wireless AP Controller Redundancy Check</td>
+                    <td>Resilience & Redundancy</td>
+                    <td>Finds wireless access points connected to only one controller, creating availability risks during controller maintenance</td>
+                </tr>
+                <tr>
+                    <td>Wireless Client Distribution Analysis</td>
+                    <td>Intelligence & Analytics</td>
+                    <td>Tracks wireless client counts over time across all APs to optimize capacity and detect overloaded cells, surpassing Cisco DNA's single-AP client visibility with network-wide historical insights.</td>
+                </tr>
+                <tr>
+                    <td>Routing Table Intelligence & Analysis</td>
+                    <td>Intelligence & Analytics</td>
+                    <td>Parses global routing and BGP tables to validate route propagation, detect suboptimal paths, and identify routing anomalies</td>
+                </tr>
+                <tr>
+                    <td>Enhanced Traceroute Tool</td>
+                    <td>Intelligence & Analytics</td>
+                    <td>Performs advanced traceroute from Linux or Cisco devices, enriched with IP database and DNS lookups for better path visualization</td>
+                </tr>
+                <tr>
+                    <td>Comprehensive Device Reachability Checker</td>
+                    <td>Intelligence & Analytics</td>
+                    <td>Uses multi-protocol testing suite to determine actual device status, even when behind firewalls or with ICMP blocked</td>
+                </tr>
+                <tr>
+                    <td>AI-Powered Network Troubleshooting Assistant</td>
+                    <td>Troubleshooting & Diagnostics</td>
+                    <td>Automatically collects show commands from local and remote devices, then leverages AI with RAG for intelligent root cause analysis</td>
+                </tr>
+                <tr>
+                    <td>Automated Password Recovery</td>
+                    <td>Security & Operations</td>
+                    <td>Decrypts device local credentials through hash processing or automated login scripts for emergency access recovery</td>
                 </tr>
             </tbody>
         </table>
     </div>
 </div>
-
 </body>
 </html>

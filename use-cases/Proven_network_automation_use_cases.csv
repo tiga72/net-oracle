@@ -1,0 +1,25 @@
+Use Case,Category,Business Value
+Configuration Compliance Monitoring,Configuration Management,"Continuously validates network devices against company configuration standards, preventing security gaps and policy violations"
+Static Configuration Deployment at Scale,Configuration Management,"Rapidly deploys standardized configurations across thousands of devices. 
+Achievement: Deployed 30,000 TACACS configs across 7,000+ devices in 35 minutes"
+Dynamic Interface Documentation,Configuration Management,"Automatically modifies device configurations based on discovered network context and peer information 
+(e.g., tagging wireless controller uplinks with '#wireless', updating QoS policies based on device type)"
+Link Quality Telemetry Analysis,Health & Monitoring,"Monitors interface errors, CRC, duplex mismatches, and speed degradation to detect performance issues before they impact users"
+Automated Link Connectivity Testing,Health & Monitoring,Executes ping tests across all network links on target devices to validate end-to-end connectivity and identify silent failures
+Link Stability & Flapping Detection,Health & Monitoring,"Identifies unstable network links with excessive flap counts, enabling proactive replacement before outages occur"
+Device Reload Risk Assessment,Health & Monitoring,Flags devices with extremely high uptimes that may be running outdated code or harboring memory leaks requiring maintenance windows
+Debug State Detection & Remediation,Health & Monitoring,Identifies devices running resource-intensive debug commands and automatically disables them to prevent performance degradation
+Unsaved Configuration Detection,Health & Monitoring,"Discovers devices with uncommitted configuration changes and either saves or alerts, preventing configuration loss during unexpected reboots"
+Media Type Mismatch Detection,Health & Monitoring,"Discovers fiber optic media mismatches between link endpoints (e.g., SX vs LX) that cause intermittent connectivity issues"
+OSPF Interface Type Validation,Health & Monitoring,Detects OSPF interface type mismatches (broadcast vs point-to-point) that prevent neighbor relationships from forming
+Self-Loopback Detection,Health & Monitoring,"Identifies ports accidentally wired back to the same device, typically from cabling errors during installation"
+Port-Channel Redundancy Audit,Resilience & Redundancy,"Detects port-channels operating with only one active member, eliminating the redundancy they were designed to provide"
+Single-Homed Device Discovery,Resilience & Redundancy,"Identifies network devices lacking redundant uplinks, highlighting single points of failure in the infrastructure"
+Wireless AP Controller Redundancy Check,Resilience & Redundancy,"Finds wireless access points connected to only one controller, creating availability risks during controller maintenance"
+Wireless Client Distribution Analysis,Intelligence & Analytics,"Tracks wireless client counts over time across all APs to optimize capacity and detect overloaded cells, 
+surpassing Cisco DNA’s single-AP client visibility with network-wide historical insights."
+Routing Table Intelligence & Analysis,Intelligence & Analytics,"Parses global routing and BGP tables to validate route propagation, detect suboptimal paths, and identify routing anomalies"
+Enhanced Traceroute Tool,Intelligence & Analytics,"Performs advanced traceroute from Linux or Cisco devices, enriched with IP database and DNS lookups for better path visualization"
+Comprehensive Device Reachability Checker,Intelligence & Analytics,"Uses multi-protocol testing suite to determine actual device status, even when behind firewalls or with ICMP blocked"
+AI-Powered Network Troubleshooting Assistant,Troubleshooting & Diagnostics,"Automatically collects show commands from local and remote devices, then leverages AI with RAG for intelligent root cause analysis"
+Automated Password Recovery,Security & Operations,Decrypts device local credentials through hash processing or automated login scripts for emergency access recovery
